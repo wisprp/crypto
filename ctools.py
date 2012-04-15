@@ -22,7 +22,7 @@ def str2bit(in_string):
         bitstring += ch2bit(ch)
     return bitstring
 
-def hch2bit(in_hex):
+def hexch2bit(in_hex):
     """
     replace hex char to 4 bits 
     note: every single char replaced by 4 digit
@@ -30,7 +30,7 @@ def hch2bit(in_hex):
     """
     return bin(int(in_hex,16))[2:].zfill(4)
 
-def hstr2bit(in_hex_string):
+def hexstr2bit(in_hex_string):
     """
     convert string into string of ascii bits
     #TODO: change for loop to map
@@ -39,7 +39,7 @@ def hstr2bit(in_hex_string):
     """
     bitstring = ''
     for ch in in_hex_string:
-        bitstring += hch2bit(ch)
+        bitstring += hexch2bit(ch)
     return bitstring
 
 def bit2ch(bit_ch):
